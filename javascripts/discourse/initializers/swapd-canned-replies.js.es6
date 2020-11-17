@@ -16,6 +16,10 @@ function initTheme(api) {
     const composer = api.container.lookup("controller:composer");
 
     composer.send("showCannedRepliesButton");
+
+    Ember.run.later(this, () => {
+      $(".d-editor-textarea-wrapper textarea").focus();
+    }, 400);
   };
 
   appEvents.on("composer:opened", this, showCanned);
