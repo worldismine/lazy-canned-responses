@@ -19,7 +19,7 @@ function initTheme(api) {
 
     Ember.run.later(this, () => {
       $(".d-editor-textarea-wrapper textarea").focus();
-    }, 1000);
+    }, 800);
   };
 
   appEvents.on("composer:opened", this, showCanned);
